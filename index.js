@@ -94,3 +94,59 @@ const removeGoalAction = (id) => {
         id,
     };
 };
+
+// Adding listener to store
+store.subscribe(() => {
+    console.log("The new state is: ", store.getState());
+});
+
+// Modifying current state
+
+// Adding todo in state
+store.dispatch(
+    addTodoAction({
+        id: 0,
+        name: "Code and have fun",
+        complete: false,
+    })
+);
+
+store.dispatch(
+    addTodoAction({
+        id: 1,
+        name: "Walk for health",
+        complete: false,
+    })
+);
+
+store.dispatch(
+    addTodoAction({
+        id: 2,
+        name: "Going to lunch for a business meet",
+        complete: true,
+    })
+);
+
+// Removing todo from state
+store.dispatch(removeTodoAction(2));
+
+// Toggling a todo
+store.dispatch(toggleTodoAction(1));
+
+// Adding a goal to current state
+store.dispatch(
+    addGoalAction({
+        id: 0,
+        name: "Dance class",
+    })
+);
+
+store.dispatch(
+    addGoalAction({
+        id: 1,
+        name: "Yoga Everyday",
+    })
+);
+
+// Removing a state using id
+store.dispatch(removeGoalAction(0));
