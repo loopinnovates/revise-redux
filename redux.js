@@ -29,3 +29,5 @@ const createStore = (reducer) => {
         dispatch,
     };
 };
+
+export default createStore;
