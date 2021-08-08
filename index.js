@@ -51,4 +51,46 @@ const app = (state = [], action) => {
 };
 
 // Creating a Store
-const store = createStore(app)
+const store = createStore(app);
+
+/* Action Method */
+
+// 1. Add Todo
+const addTodoAction = (todo) => {
+    return {
+        type: AddTodo,
+        todo,
+    };
+};
+
+// 2. Remove Todo using id
+const removeTodoAction = (id) => {
+    return {
+        type: RemoveTodo,
+        id,
+    };
+};
+
+// 3. Toggle Todo using id
+const toggleTodoAction = (id) => {
+    return {
+        type: ToggleTodo,
+        id,
+    };
+};
+
+// 4. Add a Goal
+const addGoalAction = (goal) => {
+    return {
+        type: AddGoal,
+        goal,
+    };
+};
+
+// 5. Remove a Goal using id
+const removeGoalAction = (id) => {
+    return {
+        type: RemoveGoal,
+        id,
+    };
+};
