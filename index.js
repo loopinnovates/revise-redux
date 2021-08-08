@@ -1,5 +1,4 @@
-import "./redux";
-import createStore from "./redux";
+import createStore from"./redux.js";
 
 // Action Name
 const AddTodo = "AddTodo";
